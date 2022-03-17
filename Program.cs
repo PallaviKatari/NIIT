@@ -47,7 +47,7 @@ namespace NIIT
             //Type Conversion
             Console.WriteLine("Type Conversion: "+ Convert.ToInt32(g));
             Console.ReadLine();
-
+            
             //Get Trainee Details and Display
             string name;
             int id;
@@ -64,6 +64,13 @@ namespace NIIT
             Console.WriteLine("My name is: {0} and my Id is: {1}",name,id);
             Console.WriteLine("My ID is: {1} and My Name is: {0}", name, id);
             Console.WriteLine("{0} is a very good developer.\n{0} resides in Bangalore", name);
+
+        }
+        /// <summary>
+        /// Addition OPeration
+        /// </summary>
+        public void Add()
+        {
 
         }
     }
