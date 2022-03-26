@@ -45,11 +45,14 @@ namespace NIIT
             try
             {
                 int[] numbers = {1,2,3,4,5,6,7};
-                Console.WriteLine(numbers[1]);
+                Console.WriteLine(numbers[10]);
             }
             catch (IndexOutOfRangeException e)
             {
                 Console.WriteLine(e.Message);
+                Console.WriteLine(e.StackTrace);
+                Console.WriteLine(e.TargetSite);
+                Console.WriteLine(e.Source);
             }
         }
         public static void Main()
