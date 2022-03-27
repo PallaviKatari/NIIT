@@ -6,6 +6,20 @@ using System.Threading.Tasks;
 
 namespace NIIT
 {
+    /// <summary>
+    /// IDisposable- pre-defined interface created by .NET Framework
+    /// Explicitly called not by the garbage collector
+    /// Dispose()-Files,Services,Database connection
+    /// </summary>
+    public class DestructorDispose:IDisposable
+    {
+        //Method definition for Dispose() method
+        //
+        public void Dispose()
+        {
+            Console.WriteLine("Memory is Cleared");
+        }
+    }
     internal class ConstructorDestructor
     {
         public static void Main()
@@ -13,6 +27,9 @@ namespace NIIT
             Addition7 addition = new Addition7();//Default Constructor is called
             Addition7 addition2 = new Addition7(10);//Constructor (1 int parameter)
             Addition7 addition3 = new Addition7(20, 30);//Constructor (2 int parameters)
+            DestructorDispose destructorDispose = new DestructorDispose();
+            //Invoking the Dispose() method
+            destructorDispose.Dispose();
         }
     }
     public class Addition7
@@ -32,7 +49,7 @@ namespace NIIT
             Console.WriteLine(a + b);
         }
 
-        //Garabage Collection- automatically memory is set free
+        //Garbage Collection- automatically memory is set free
         //Destructor- same name(class name)-one destructor per class
         //Destructor-no return type,no access specifier
         //Destructor-prefixed with a ~Tilde symbol

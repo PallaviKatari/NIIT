@@ -19,7 +19,6 @@ interface I2
     void mymethod();
 }
 
-// Geeks implements both 
 // G1 and G2 interface
 class InterfaceMethod : I1, I2
 {
@@ -48,6 +47,7 @@ public class MainClass
 
         // Creating object of InterfaceMethod
         // of I1 interface
+        //Base(Interface)->Derived(Class)
         I1 obj = new InterfaceMethod();
 
         // calling I1 interface method
@@ -55,6 +55,7 @@ public class MainClass
 
         // Creating object of InterfaceMethod
         // of I2 interface
+        //Base(Interface)->Derived(Class)
         I2 ob = new InterfaceMethod();
 
         // calling I2 interface method
