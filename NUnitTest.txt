@@ -1,0 +1,61 @@
+using NUnit.Framework;
+using NIIT;
+
+namespace NUnitTest_UnitTestDemo
+{
+    [TextFixture]
+    public class Tests
+    {
+        [Test]
+        [Repeat(2)]
+        [MaxTime(200)]
+        public void Add()
+        {
+            UnitTestDemo demo = new UnitTestDemo();
+            int result = demo.Add(10, 10);
+            //Test the Add Method
+            //Assert.AreEqual(20, result);
+            Assert.That(result, Is.EqualTo(20));
+            //Assert.AreEqual(result, 20);
+        }
+
+        [Test]
+        [TestCase(35,15,50)]
+        [TestCase(30, 15, 45)]
+        [TestCase(30, 5, 35)]
+        public void AddMethod(int a,int b,int expectedresult)
+        {
+            UnitTestDemo demo1=new UnitTestDemo();
+            int result=demo1.Add(a,b);
+            Assert.AreEqual(expectedresult, result);
+
+        }
+
+//NUNIT TEST ATTRIBUTES
+//----------------------
+//[TextFixture]-class level-indicates that there ia a NUnit test methods
+
+//[Setup]-optional attribute-void (null) will be executed before each test
+
+//[Test]-method to be tested
+
+//[TearDown]-method will be executed after the test case-reset values in the test method
+
+//[Ignore]-ignores the test case
+
+//[Repeat]-repeat the test multiple times
+
+//[MaxTime]-maximum time of the execution
+
+       [SetUp]
+        public void Setup()
+        {
+        }
+
+        [Test]
+        public void Test1()
+        {
+            Assert.Pass();
+        }
+    }
+}
