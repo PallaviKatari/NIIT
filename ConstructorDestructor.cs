@@ -57,6 +57,7 @@ namespace NIIT
 
         //Destructor-Finalize(),Dispose()
         //Finalize()-Whenever a destructor is called-automatically finalize() is called internally
+        //no access specifier and no return type
         ~Addition7()
         {
             Console.WriteLine("I am a Destructor");

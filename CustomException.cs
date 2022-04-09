@@ -25,7 +25,7 @@ namespace NIIT
             {
                 Console.WriteLine("Attendance Details on 26-03-2022");
                 Console.WriteLine("Enter the number of students who are present today");
-                total=int.Parse(Console.ReadLine());
+                total=int.Parse(Console.ReadLine());//20
                 if(total<35)
                 {
                     throw (new AttendanceException("Some are absent"));
@@ -38,7 +38,7 @@ namespace NIIT
             }
             catch(AttendanceException e)
             {
-                Console.WriteLine(e.Message);
+                Console.WriteLine(e.Message);//Some are absent
             }
             Console.ReadLine();
         }

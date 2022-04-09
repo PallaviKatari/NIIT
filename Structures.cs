@@ -9,7 +9,7 @@ namespace NIIT
     //class-reference type,heap memory,constructor
     //and destructor,new keyword(instance),inheritance,protected
 
-    //structures-value type,stack memory,no constructors or destructors,
+    //structures-value type,stack memory,no deafult constructors or destructors,parameterized constructor,
     //new(not mandatory)for instance,does not support inheritance,protected(not supported)
     
         /// <summary>

@@ -157,7 +157,7 @@ namespace NIIT
             {
                 Console.WriteLine(j);
             }
-            //Console.WriteLine(key[4]);
+            //Console.WriteLine(key[4]); //raise an error
 
         }
 
@@ -178,7 +178,7 @@ namespace NIIT
                 Console.WriteLine(ht[i]);
             }
 
-            Console.WriteLine("Key is:{0}", ht[5]);
+            Console.WriteLine("Key is:{0}", ht[5]); //display a null value
 
         }
 

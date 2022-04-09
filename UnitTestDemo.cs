@@ -12,8 +12,8 @@ namespace NIIT
         public static void Main()
         {
             UnitTestDemo demo = new UnitTestDemo();
-            int result=demo.Add(10, 10);
-            Console.WriteLine(result);
+            int result=demo.Add(10, 10);//20
+            Console.WriteLine(result);//20
         }
         public int Add(int a,int b)
         {
