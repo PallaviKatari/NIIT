@@ -27,7 +27,7 @@ namespace NIIT
             try
             {
                 employee = new Employee1();
-                employee.Name = "John123";
+                employee.Name = "John1";
                 NameValidation(employee);
                 Console.WriteLine("Valid Student name: {0}",employee.Name);
             }

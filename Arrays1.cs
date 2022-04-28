@@ -25,10 +25,10 @@ namespace NIIT
             };
             Console.WriteLine("Contents in 2D array");
             //looping the elements in the row
-            for(int i = 0; i < 2; i++)
+            for(int i = 0; i < 2; i++) //0<2 1<2 2<2
             {
                 //looping the elements in the column
-                for(int j = 0; j < 3; j++)
+                for(int j = 0; j < 3; j++) //0<3...3<3
                 {
                     Console.Write(b[i, j]);
                     Console.Write("\t");

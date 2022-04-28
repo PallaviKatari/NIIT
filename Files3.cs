@@ -14,28 +14,28 @@ namespace NIIT
             //File.WriteAllText(@"E:\Sample.txt", "WriteAllText Concept");
             // string contents = File.ReadAllText(@"E:\Sample.txt");
             //Console.WriteLine(contents);
-            //File.Delete(@"E:\Sample.txt");
+            // File.Delete(@"E:\Sample.txt");
 
             //GetFiles->Retrieves all the files
-            foreach (string file in Directory.GetFiles(@"E:\PALLAVI\NIIT"))
-            {
-                Console.WriteLine(file);
-            }
+            //foreach (string file in Directory.GetFiles(@"E:\PALLAVI\C#"))
+            //{
+            //    Console.WriteLine(file);
+            //}
 
             //GetDirectories->Retrieves all the folders in the specified directory
-            foreach(string file1 in Directory.GetDirectories(@"E:\PALLAVI\NIIT"))
-            {
-                Console.WriteLine(file1);
-            }
+            //foreach (string file1 in Directory.GetDirectories(@"E:\"))
+            //{
+            //    Console.WriteLine(file1);
+            //}
 
             string path = @"E:\TestFile1.txt";
             //File Properties
-            FileInfo file2=new FileInfo(path);
+            FileInfo file2 = new FileInfo(path);
             Console.WriteLine(file2.FullName);
             Console.WriteLine(file2.Length);
             Console.WriteLine(file2.Extension);
             Console.WriteLine(file2.CreationTime);
-            Console.WriteLine(file2.LastAccessTime);
+            Console.WriteLine(file2.Exists);
 
         }
     }

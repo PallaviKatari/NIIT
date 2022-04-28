@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Text;
 
 namespace BubbleSort
 {
@@ -33,10 +34,28 @@ namespace BubbleSort
         // Main method
         public static void Main()
         {
-            int[] arr = { 90, 76, 45, 93, 68, 13, 98 };
-            bubbleSrt(arr);
-            Console.WriteLine("Sorted array");
-            printIt(arr);
+            //int[] arr = { 90, 76, 45, 93, 68, 13, 98 };
+            //bubbleSrt(arr);
+            //Console.WriteLine("Sorted array");
+            //printIt(arr);
+            String result=remVowel("John");
+            Console.WriteLine(result);
+
+        }
+        static String remVowel(String str)
+        {
+            char[] vowels = { 'a', 'e', 'i', 'o', 'u', 'A', 'E', 'I', 'O', 'U' };
+            List<char> al = vowels.OfType<char>().ToList(); ;
+            StringBuilder sb = new StringBuilder(str);
+            for (int i = 0; i < sb.Length; i++)
+            {
+                if (al.Contains(sb[i]))
+                {
+                    sb.Replace(sb[i].ToString(), "");
+                    i--;
+                }
+            }
+            return sb.ToString();
         }
     }
 }

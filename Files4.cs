@@ -19,12 +19,14 @@ namespace DemoApplication
         public int ID;
         public String Name;
         public String Designation;
+        public int Age;
         static void Main(string[] args)
         {
             Files obj = new Files();
             obj.ID = 1;
             obj.Name = "John";
             obj.Designation = "HR";
+            obj.Age = 25;
 
             //Encryption and Decryption
             //IFormatter->Interface(Serialize and Deserialize),BinaryFormatter(class)->inheriting->IFormatter
@@ -50,6 +52,7 @@ namespace DemoApplication
             Console.WriteLine(objnew.ID);
             Console.WriteLine(objnew.Name);
             Console.WriteLine(objnew.Designation);
+            Console.WriteLine(objnew.Age);
 
             Console.ReadKey();
         }

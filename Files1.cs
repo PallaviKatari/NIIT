@@ -18,20 +18,21 @@ namespace NIIT
             //Append->Only in Write mode
             //FileStream fs = finfo.Open(FileMode.Append, FileAccess.Write, FileShare.Read);
 
-            FileStream fs1 = finfo.Open(FileMode.OpenOrCreate, FileAccess.ReadWrite, FileShare.Read);
+            FileStream fs1 = finfo.Open(FileMode.Append, FileAccess.Write, FileShare.ReadWrite);
             //Read contents from the TestFile1.txt
             //StreamReader Helper class
-            StreamReader sr = new StreamReader(fs1);
+            //StreamReader sr = new StreamReader(fs1);
+            StreamWriter sw = new StreamWriter(fs1); //TestFile1.txt
             try
             {
                 //Write contents into the file TestFile1.txt
                 //StreamWriter Helper Class
-                //StreamWriter sw = new StreamWriter(fs);
-                //sw.WriteLine("Welcome to Files Append Concept");
+                //StreamWriter sw = new StreamWriter(fs1);
+                sw.WriteLine("Welcome to Files StreamWriter Concept");
                 ////Close the StreamWriter Class
                 //sw.Close();     
-                string contents = sr.ReadToEnd();
-                Console.WriteLine(contents);
+                //string contents = sr.ReadToEnd();
+               // Console.WriteLine(contents);
             }
             catch(FileNotFoundException e)
             {
@@ -39,7 +40,7 @@ namespace NIIT
             }
             finally
             {
-                sr.Close();
+                sw.Close();
 
                 //Close FileStream
                 //fs.Close(); 

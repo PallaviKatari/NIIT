@@ -16,16 +16,21 @@ namespace NIIT
     //Custom-Exception(User-defined) -Developer can create an owm exception class
     internal class Exceptions
     {
-        int result=0;
+        float result=0;
         /// <summary>
         /// DivideByZeroException
         /// </summary>
-        public void Divide(int a,int b)
+        public void Divide(float a,float b)
         {
             //try block-holds the set of doubtful codes
             try
             {
                 result=a/b;
+                if (float.IsInfinity(result))
+                {
+                    Console.WriteLine("Division by zero not allowed");
+
+                }
             }
             //Handle the exception
             catch(DivideByZeroException)
@@ -58,7 +63,7 @@ namespace NIIT
         public static void Main()
         {
             Exceptions ex = new Exceptions();   
-            ex.Divide(10,0);
+            ex.Divide(10.10f,10.10f);
             ex.ArrayIndex();
         }
     }

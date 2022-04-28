@@ -12,7 +12,7 @@ namespace NIIT
         public static void Main()
         {
             Console.WriteLine("Email Validation");
-            string email = "Abc123_Xyz@abc.com";
+            string email = "Abc123_Xyzabc.com";
             var result = Regex.IsMatch(email, @"^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$");
             Console.WriteLine(result);
             wordmatch();
@@ -40,18 +40,18 @@ namespace NIIT
         }
         public static void MobileValidation()
         {
-            string[] mobile = { "983567287", "8745638297" };
+            string[] mobile = { "9835672870", "8745638287" };
             foreach(string m in mobile)
             {
                 Console.WriteLine(m);
-                Console.WriteLine(checkMobile(m));
+                Console.WriteLine(checkMobile(m)); //False
             }
         }
         public static bool checkMobile(string mobile)
         {
-            string mregexp = @"(^[0-8]{10}$)";
+            string mregexp = @"(^[0-9]{10}$)"; //983567287
             Regex r = new Regex(mregexp);
-            if (r.IsMatch(mobile))
+            if (r.IsMatch(mobile)) //983567287
             {
                 return true;
             }
