@@ -53,7 +53,9 @@ namespace NIIT
             int id;
             Console.WriteLine("Trainee Details");
             Console.WriteLine("Enter your name");
-            name =Console.ReadLine();
+#pragma warning disable CS8600 // Converting null literal or possible null value to non-nullable type.
+            name = Console.ReadLine();
+#pragma warning restore CS8600 // Converting null literal or possible null value to non-nullable type.
             Console.WriteLine("Enter your ID");
             id=Convert.ToInt32(Console.ReadLine());
             //id = int.Parse(id);

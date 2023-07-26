@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NIIT
 {
-    class Program
+    class Email
     {
 
         //params- if your not sure of the number of parameters to be passed
@@ -26,7 +26,7 @@ namespace NIIT
         
         public static void Main()
         {
-            Program program = new Program();
+            Email program = new Email();
             int[] arr = new int[10] {1,2,3,4,5,6,7,8,9,10};
             //First calling of the method
             int result=program.AddElements(arr);//55

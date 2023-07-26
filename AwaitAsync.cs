@@ -9,6 +9,7 @@ namespace NIIT
 
     class AwaitAyncDemo
     {
+
         public static async Task Main()
         {
             Sample();
@@ -20,7 +21,8 @@ namespace NIIT
         static async Task Sample()
         {
             Console.WriteLine("Starting...");
-           
+            Console.WriteLine();
+
 
         }
     }
