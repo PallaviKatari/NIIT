@@ -51,7 +51,7 @@ namespace NIIT
             ILogger logger = new ConsoleLogger();
             IConfiguration configuration = new AppConfigConfiguration();
             EmailService emailService = new EmailService(logger, configuration);
-            emailService.SendEmail("pallavikatari@gmail.com", "Test Subject", "This is a test email");
+            emailService.SendEmail("example@example.com", "Test Subject", "This is a test email");
             Console.WriteLine("Press any key to exit...");
             Console.ReadKey();
         }

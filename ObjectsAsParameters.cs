@@ -31,6 +31,24 @@ namespace NIIT
         {
             myMethodParams theParams = new myMethodParams();
             theParams.myFunction(theParams);
+            try
+            {
+                int number;
+                bool result = Int32.TryParse("00123", out number);
+                int result1 = Int32.Parse("001234");
+                if (result)
+                {
+                    Console.WriteLine("Coversion successful");
+                    Console.WriteLine("Parsed Value : {0}", number);
+                    Console.WriteLine("Parsed Value : {0}", result1);
+                }
+                else
+                    Console.WriteLine("Coversion failed");
+            }
+            catch (Exception e)
+            {
+
+            }
         }
     }
 
